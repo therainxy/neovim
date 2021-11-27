@@ -8,6 +8,7 @@
 "
 "
 "
+"===================================basic configuration for nvim =============="
 set nu
 set cursorline 
 set incsearch
@@ -18,9 +19,11 @@ set mouse=a
 set smartindent
 syntax on
 
+"cursor shape always is '|'
+set gcr=n-v-c:ver25-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor
+
 set autoindent
 set tabstop=4
-
 let g:lsp_highlights_enabled = 0
 let g:lsp_textprop_enabled = 0
 
