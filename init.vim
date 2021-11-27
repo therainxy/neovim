@@ -69,7 +69,7 @@ vnoremap <C-i> 8k
 vnoremap <C-c>	"+y
 "复制内容
 
-nnoremap <C-p>	"+p
+nnoremap <C-P>	"+p
 "粘贴内容
 
 let g:python_host_prog = '/usr/bin/python2.7'
@@ -134,9 +134,6 @@ vnoremap w; :w
 
 "------------------------------configuration for plugins-----------------------"
 call plug#begin('~/.config/plugged')
-"Plug 'junegunn/goyo.vim'			"vim沉浸式体验
-"Plug 'preservim/nerdtree'			"文件树显示
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	"fzf for nvim/vim
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-gruvbox8'		"vim主题
@@ -146,7 +143,6 @@ Plug 'voldikss/vim-floaterm'		"浮动终端
 Plug 'majutsushi/tagbar'			"显示文件函数信息
 Plug 'neoclide/coc.nvim', {'branch': 'release'}	"neovim下代码补全插件
 Plug 'vim-airline/vim-airline-themes' "底部状态栏主题
-"Plug 'tpope/vim-surround'			"操作配对符号
 Plug 'preservim/nerdcommenter'		"快速注释
 Plug 'SirVer/ultisnips'				"code snippets
 Plug 'honza/vim-snippets'
@@ -154,15 +150,24 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'gcmt/wildfire.vim'
 Plug 'ianva/vim-youdao-translater'
+"Plug 'puremourning/vimspector'		;debug plug-in in vim(neovim?)
 call plug#end()
 
 colorscheme  gruvbox8
 
+"configuration of float terminal
+let g:floaterm_wintype = "vsplit" "type of window:split(vsplit) or float
+let g:floatterm_width = 0.5 "height and width
+let g:floaterm_height = 0.5
+let g:floaterm_position = "right" "position
 
 "keys mapping of youdao-translater.vim
 vnoremap <silent> <C-T> :<C-u>Ydv<CR>
 nnoremap <silent> <C-T> :<C-u>Ydc<CR>
 noremap <leader>yd :<C-u>Yde<CR>
+
+
+
 "color of rainbow
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
