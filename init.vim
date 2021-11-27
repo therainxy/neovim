@@ -150,10 +150,16 @@ Plug 'honza/vim-snippets'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'gcmt/wildfire.vim'
+Plug 'ianva/vim-youdao-translater'
 call plug#end()
 
 colorscheme  gruvbox8
 
+
+"keys mapping of youdao-translater.vim
+vnoremap <silent> <C-T> :<C-u>Ydv<CR>
+nnoremap <silent> <C-T> :<C-u>Ydc<CR>
+noremap <leader>yd :<C-u>Yde<CR>
 "color of rainbow
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
